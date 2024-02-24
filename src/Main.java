@@ -5,25 +5,24 @@ public class Main {
 
         int balance = 100;
         int replenishment = 1001;
-        int bonus = replenishment / 100;
+        int bonus;
         if (replenishment > 1000) {
-            System.out.println("Сумма бонусов:");
-            System.out.println(replenishment / 100);
+            bonus = replenishment / 100;
+        } else {
+            bonus = 0;
         }
-        if (replenishment <= 1000) {
-            System.out.println("Сумма бонусов:");
-            System.out.println(0);
+        {
+            System.out.println("Сумма бонусов:" + bonus);
         }
-        int amount = balance + replenishment + bonus;
+        int alone;
         if (replenishment > 1000) {
-            System.out.println("Итоговый счёт:");
-            System.out.println(balance + replenishment + bonus);
+            alone = balance + replenishment + bonus;
+        } else {
+            alone = balance + replenishment;
         }
-        if  (replenishment <= 1000) {
-            System.out.println("Итоговый счёт:");
-            System.out.println(balance + replenishment);
+        {
+            System.out.println("Итоговая сумма:" + alone);
         }
-
 
 
     }
